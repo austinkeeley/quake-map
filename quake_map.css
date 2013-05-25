@@ -1,0 +1,26 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+#wrapper {
+  width: auto;
+  min-height: 100%;
+  margin: 20px;
+}
+
+#info {
+  height: 100px;
+  margin: 20px;
+}
+
+#map_canvas {
+  height: 500px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#faults {
+	margin-left: 20px;
+	margin-bottom: 20px;
+}

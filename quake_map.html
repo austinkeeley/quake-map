@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quake Map</title>
+		<link type="text/css" rel="stylesheet" href="quake_map.css" />
+		<script type="text/javascript" src="key.js"></script>
+		<script type="text/javascript">
+			// Load the google maps
+			var src = 'https://maps.googleapis.com/maps/api/js?key=' + key + '&sensor=false';
+			document.write('<scr' + 'ipt type="text/javascript" src="' + src + '"></scr' + 'ipt>');
+		</script>
+		<script type="text/javascript">
+			var map;
+			function initialize() {
+				var mapOptions = {
+					zoom: 2,
+					center: new google.maps.LatLng(0.0, 0),
+					mapTypeId: google.maps.MapTypeId.SATELLITE
+				};
+				map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = 'quake_map.js';
+				document.head.appendChild(script);
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="info">
+				<h1>Quake Map</h1>
+				<p>This displays current earthquakes.  The data is provided by the United States
+				Geological Survey.</p>
+			</div>
+			<div id="faults">
+				Major quake locations:
+				<select id="fault_select" onchange="handle_fault_select()">
+				</select>
+			</div>
+			<div id="map_canvas"></div>
+		</div>
+	</body>
+</html>
