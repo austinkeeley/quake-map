@@ -14,11 +14,11 @@ var quake_map_layer = new google.maps.KmlLayer(layer_options);
 // add the popular quake locations
 var popular_quakes = [
 	{ text: 'San Andreas Fault', value: '37.909534,-121.534424' },
-	{ text: 'Ring of Fire (Aleutian trench)', value: '0,0' },
-	{ text: 'Ring of Fire (Japan trench)', value: '0,0' },
-	{ text: 'Ring of Fire (Java trench)', value: '0,0' },
-	{ text: 'Ring of Fire (Tonga trench)', value: '0,0' },
-	{ text: 'Ring of Fire (Peru-Chile trench)', value: '0,0' },
+	{ text: 'Ring of Fire (Aleutian trench)', value: '54.007769,-164.633791' },
+	{ text: 'Ring of Fire (Japan trench)', value: '42.55308,142.705075' },
+	{ text: 'Ring of Fire (Java trench)', value: '2.635789,124.599606' },
+	{ text: 'Ring of Fire (Tonga trench)', value: '-16.804541,-179.150394' },
+	{ text: 'Ring of Fire (Peru-Chile trench)', value: '-15.284185,-78.251957' },
 	{ text: 'Alpide Belt', value: '31.802893,80.12695' }
 ];
 
