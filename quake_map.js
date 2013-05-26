@@ -34,6 +34,9 @@ for (var i=0; i < popular_quakes.length; i++) {
  */
 function handle_fault_select() {
 	var fault = document.getElementById('fault_select').value;
-	if (fault)
-		alert(fault);	
+	if (fault) {
+		var latLong = fault.split(',');
+		map.panTo(new google.maps.LatLng(latLong[0], latLong[1]));
+		map.setZoom(5);
+	}
 }
